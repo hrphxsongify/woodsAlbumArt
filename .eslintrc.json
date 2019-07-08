@@ -1,0 +1,25 @@
+{
+  "extends": ["airbnb-base", "prettier", "plugin:react/recommended"],
+  "settings": {
+    "react": {
+      "createClass": "createReactClass",
+      "pragma": "React",
+      "version": "^16.8.6",
+      "flowVersion": "0.53"
+    },
+    "propWrapperFunctions": [
+      "forbidExtraProps",
+      {
+        "property": "freeze",
+        "object": "Object"
+      },
+      {
+        "property": "myFavoriteWrapper"
+      }
+    ],
+    "linkComponents": ["Hyperlink", {
+      "name": "Link",
+      "linkAttribute": "to"
+    }]
+  }
+}
