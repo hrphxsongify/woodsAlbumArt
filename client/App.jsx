@@ -1,4 +1,6 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
+import $ from 'jquery';
 
 class App extends React.Component {
   constructor(props) {
@@ -8,13 +10,12 @@ class App extends React.Component {
     };
   }
 
-  getImg(img) {
+  componentDidMount() {
     $.ajax({
       type: 'get',
-      url: 'http://localhost:3001/',
-      data: img,
+      url: 'http://localhost:3001/api/album/0',
       success: data => {
-        this.setState({ url: data });
+        this.setState({ url: data[0].img });
       },
       dataType: 'json'
     });
@@ -24,7 +25,8 @@ class App extends React.Component {
     console.log(this);
     return (
       <div>
-        <h1>hi world</h1>
+        <h1>hi</h1>
+        <img src={this.state.url} />
       </div>
     );
   }
