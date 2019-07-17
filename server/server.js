@@ -24,7 +24,7 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 app.use(express.static('../client/dist'));
 
-app.get('/script', async (req, res) => {
+app.get('/art', async (req, res) => {
   res.sendFile(await path.join(__dirname, '../client/dist/bundle.js'));
 })
 app.get('/style', async (req, res) => {
@@ -32,8 +32,6 @@ app.get('/style', async (req, res) => {
 })
 
 app.get('/api/album/:albumArtId', async (req, res) => {
-  console.log('here');
-  console.log(Number(req.params.albumArtId) + 200)
   res.send(await AlbumArt.find({
     _id: Number(req.params.albumArtId) + 200
   }).exec());

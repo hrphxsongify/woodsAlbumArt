@@ -13,12 +13,10 @@ class App extends React.Component {
   componentDidMount() {
     const window = document.URL;
     const url = window[window.length - 1];
-    console.log(`http://localhost:3001/api/album/${url}`);
     $.ajax({
       type: 'get',
       url: `http://localhost:3001/api/album/${url}`,
       success: data => {
-        console.log(data);
         this.setState({ url: data[0].img });
       },
       dataType: 'json'
@@ -26,7 +24,6 @@ class App extends React.Component {
   }
 
   render() {
-    console.log(this);
     return (
       <div>
         <section className="playing">
