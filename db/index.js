@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
 
+// const MongoClient = require('mongodb').MongoClient;
+
 
 mongoose.connect('mongodb://localhost:27017/albumArt', {
   useNewUrlParser: true
@@ -10,9 +12,9 @@ mongoose.connect('mongodb://localhost:27017/albumArt', {
 //   const dbo = db.db("albumArt");
 
 //   for (let i = 0; i < 100; i++) {
-//     let url = 'https://maxsart.s3.us-east-2.amazonaws.com/img' + i + '.jpg';
+//     let url = 'https://maxsart.s3.us-east-2.amazonaws.com/s' + i + '.jpg';
 //     let myobj = {
-//       _id: i,
+//       _id: 200 + i,
 //       img: url
 //     };
 
