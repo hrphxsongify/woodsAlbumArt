@@ -42,8 +42,6 @@ $(window).on("resize load", function () {
   console.log(totalHeight);
 
   $(".navigation").css("height", navHeight);
-  $(".artist").css("height", artistHeight);
-  $(".social").css("height", artistHeight);
 
 });
 
