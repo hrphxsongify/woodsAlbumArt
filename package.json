@@ -11,7 +11,8 @@
     "server-dev": "nodemon server/server.js",
     "start": "nodemon server/server.js",
     "lint": "eslint client -c .eslintrc.json --ext js,jsx",
-    "test": "jest"
+    "test": "jest",
+    "seed": "node db/makeData.js"
   },
   "jest": {
     "snapshotSerializers": [
@@ -48,7 +49,7 @@
     "babel-plugin-transform-export-extensions": "^6.22.0",
     "eslint": "^5.3.0",
     "eslint-config-airbnb": "^17.1.1",
-    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor.git",
+    "eslint-config-hackreactor": "git://gi thub.com/reactorcore/eslint-config-hackreactor.git",
     "eslint-config-prettier": "^6.0.0",
     "eslint-plugin-import": "^2.18.0",
     "eslint-plugin-jsx-a11y": "^6.2.3",
