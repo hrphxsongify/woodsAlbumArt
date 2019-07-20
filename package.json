@@ -12,7 +12,8 @@
     "start": "nodemon server/server.js",
     "lint": "eslint client -c .eslintrc.json --ext js,jsx",
     "test": "jest",
-    "seed": "node db/makeData.js"
+    "seed": "node db/makeData.js",
+    "buil-product": "webpack --mode production"
   },
   "jest": {
     "snapshotSerializers": [
