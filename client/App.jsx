@@ -15,7 +15,7 @@ class App extends React.Component {
     const url = window[window.length - 1];
     $.ajax({
       type: 'get',
-      url: `http://localhost:3001/api/album/${url}`,
+      url: `ec2-34-211-225-3.us-west-2.compute.amazonaws.com/api/album/${url}`,
       success: data => {
         this.setState({ url: data[0].img });
       },
