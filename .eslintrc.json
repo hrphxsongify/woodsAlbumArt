@@ -1,6 +1,6 @@
 {
   "extends": ["airbnb-base", "prettier", "plugin:react/recommended"],
-  "settings": {
+  "settings": 
     "react": {
       "createClass": "createReactClass",
       "pragma": "React",
